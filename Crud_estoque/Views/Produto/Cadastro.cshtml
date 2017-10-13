@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "Cadastro";
+}
+
+<h2>Cadastro de Produtos</h2>
+<small>Útilize o formulário abaixo para cadastrar novos produtos no sistema.</small>
+<br />
+<br />
+<br />
+<br />
+<form method="post" class="form-horizontal" action="/Produto/Novo">
+    <div class="form-group row">
+        <label for="produto[nome]" class="col-lg-2 col-md-2 col-sm-12 col-xs-12">Nome:</label>
+        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+            <input type="text" class="form-control" name="produto[nome]" id="produto[nome]" />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="produto[fornecedor]" class="col-lg-2 col-md-2 col-sm-12 col-xs-12">Fornecedor:</label>
+        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+            <input type="text" class="form-control" name="produto[fornecedor]" id="produto[fornecedor]" />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="produto[descricao]" class="col-lg-2 col-md-2 col-sm-12 col-xs-12">Descriçao:</label>
+        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+            <input type="text" class="form-control" name="produto[descricao]" id="produto[descricao]" />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="produto[dataValidade]" class="col-lg-2 col-md-2 col-sm-12 col-xs-12">Data de Validade:</label>
+        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+            <input type="date" class="form-control" name="produto[dataValidade]" id="produto[dataValidade]" />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="produto[dataFabricacao]" class="col-lg-2 col-md-2 col-sm-12 col-xs-12">Data de Fabricação:</label>
+        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+            <input type="date" class="form-control" name="produto[dataFabricacao]" id="produto[dataFabricacao]" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-12 col-xs-12">
+            <input type="submit" class="btn btn-success btn-block" value="Cadastrar"/>
+        </div>
+    </div>
+</form>
+

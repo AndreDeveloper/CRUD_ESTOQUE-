@@ -1,0 +1,38 @@
+﻿
+@{
+    IList<Crud_estoque.Models.Produto> produtos = (IList<Crud_estoque.Models.Produto>) ViewBag.produtos;
+    ViewBag.Title = "Lista de produtos";
+}
+
+<h2>Produtos Cadastrados</h2>
+<br/>
+<br />
+<br />
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Forcenedor</th>
+            <th>Data de Fabricação</th>
+            <th>Data de Validade</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var produto in produtos)
+        {
+            <tr>
+                <td>@produto.nome</td>
+                <td>@produto.descricao</td>
+                <td>@produto.fornecedor</td>
+                <td>@produto.dataFabricacao.ToString("dd/MM/yyyy")</td>
+                <td>@produto.dataValidade.ToString("dd/MM/yyyy")</td>
+                <td>@Html.ActionLink("Editar","Editar/" + produto.id,"Produto", new { @class = "btn btn-info" })</td>
+                <td>@Html.ActionLink("Excluir","Delete/" + produto.id,"Produto", new { @class = "btn btn-danger" })</td>
+            </tr>
+        }
+    </tbody>
+</table>
